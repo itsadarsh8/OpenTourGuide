@@ -4,6 +4,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    //Paces Name
+    <string name="place_1">Delhi</string>
+    <string name="place_2">Kolkata</string>
+    <string name="place_3">Mumbai</string>
+    <string name="place_4">Goa</string>
+
 
     //Delhi Places Name
     <string name="delhi_place_1">India gate</string>

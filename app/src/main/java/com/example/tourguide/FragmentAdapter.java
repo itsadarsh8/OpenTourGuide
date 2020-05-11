@@ -46,13 +46,13 @@ public class FragmentAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "Delhi";
+                return mContext.getString(R.string.place_1);
             case 1:
-                return "Kolkata";
+                return mContext.getString(R.string.place_2);
             case 2:
-                return "Mumbai";
+                return mContext.getString(R.string.place_3);
             case 3:
-                return "Goa";
+                return mContext.getString(R.string.place_4);
             default:
                 return null;
         }
