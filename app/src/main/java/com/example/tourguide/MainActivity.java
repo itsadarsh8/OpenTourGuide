@@ -17,16 +17,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Find the view pager that will allow the user to swipe between fragments
-        ViewPager viewPager=findViewById(R.id.viewPager);
+        ViewPager viewPager = findViewById(R.id.viewPager);
 
         // Create an adapter that knows which fragment should be shown on each page
-        FragmentAdapter fragmentAdapter=new FragmentAdapter(this,getSupportFragmentManager());
+        FragmentAdapter fragmentAdapter = new FragmentAdapter(this, getSupportFragmentManager());
 
         // Set the adapter onto the view pager
         viewPager.setAdapter(fragmentAdapter);
 
 
-        TabLayout tabLayout=findViewById(R.id.tabLayout);
+        TabLayout tabLayout = findViewById(R.id.tabLayout);
 
         tabLayout.setupWithViewPager(viewPager);
 

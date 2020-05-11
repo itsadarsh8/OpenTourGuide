@@ -8,34 +8,34 @@ public class Data {
     private static final int DEFAULT_ID = -1;
 
 
-    public Data(String placeName,String placeDetails,int placeImageId){
+    public Data(String placeName, String placeDetails, int placeImageId) {
 
-        mPlaceName=placeName;
-        mPlacedetails=placeDetails;
-        mPlaceImageId=placeImageId;
+        mPlaceName = placeName;
+        mPlacedetails = placeDetails;
+        mPlaceImageId = placeImageId;
     }
 
-    public Data(String placeName,String placeDetails){
+    public Data(String placeName, String placeDetails) {
 
-        mPlaceName=placeName;
-        mPlacedetails=placeDetails;
+        mPlaceName = placeName;
+        mPlacedetails = placeDetails;
     }
 
 
-    public  String getPlaceName(){
+    public String getPlaceName() {
         return mPlaceName;
     }
 
-    public String getPlacedetails(){
+    public String getPlacedetails() {
         return mPlacedetails;
     }
 
-    public int getPlaceImageId(){
+    public int getPlaceImageId() {
         return mPlaceImageId;
     }
 
-    public boolean hasImage(){
-        return mPlaceImageId!=DEFAULT_ID;
+    public boolean hasImage() {
+        return mPlaceImageId != DEFAULT_ID;
     }
 
 

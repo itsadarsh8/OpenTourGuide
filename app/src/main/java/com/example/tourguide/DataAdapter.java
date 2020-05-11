@@ -15,34 +15,34 @@ import java.util.ArrayList;
 
 public class DataAdapter extends ArrayAdapter<Data> {
 
-    public DataAdapter(Context context, ArrayList<Data> arrayAdapter){
-        super(context,0,arrayAdapter);
+    public DataAdapter(Context context, ArrayList<Data> arrayAdapter) {
+        super(context, 0, arrayAdapter);
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View listView=convertView;
-        if(listView==null){
-            listView= LayoutInflater.from(getContext()).inflate(
+        View listView = convertView;
+        if (listView == null) {
+            listView = LayoutInflater.from(getContext()).inflate(
                     R.layout.data_list, parent, false);
         }
 
-        Data data=getItem(position);
+        Data data = getItem(position);
 
-        TextView textView_name=listView.findViewById(R.id.textView1);
+        TextView textView_name = listView.findViewById(R.id.textView1);
         textView_name.setText(data.getPlaceName());
 
-        TextView textView_detail=listView.findViewById(R.id.textView2);
+        TextView textView_detail = listView.findViewById(R.id.textView2);
         textView_detail.setText(data.getPlacedetails());
 
-        ImageView imageView=listView.findViewById(R.id.imageId);
-        if(data.hasImage()){
+        ImageView imageView = listView.findViewById(R.id.imageId);
+        if (data.hasImage()) {
             imageView.setVisibility(View.VISIBLE);
             imageView.setImageResource(data.getPlaceImageId());
-        }
-        else{
+        } else {
             imageView.setVisibility(View.GONE);
+
         }
 
         return listView;

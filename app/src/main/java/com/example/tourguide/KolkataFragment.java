@@ -14,20 +14,24 @@ import java.util.ArrayList;
 
 public class KolkataFragment extends Fragment {
 
-    public KolkataFragment(){}
+    public KolkataFragment() {
+    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootView=inflater.inflate(R.layout.list_view,container,false);
+        View rootView = inflater.inflate(R.layout.list_view, container, false);
 
-        ArrayList<Data> arrayList= new ArrayList<>();
-        arrayList.add(new Data("India Gate2","Nice Nice2"));
+        ArrayList<Data> arrayList = new ArrayList<>();
+        arrayList.add(new Data(getResources().getString(R.string.kolkata_place_1), getResources().getString(R.string.kolkata_detail_1)));
+        arrayList.add(new Data(getResources().getString(R.string.kolkata_place_2), getResources().getString(R.string.kolkata_detail_2)));
+        arrayList.add(new Data(getResources().getString(R.string.kolkata_place_3), getResources().getString(R.string.kolkata_detail_3)));
+        arrayList.add(new Data(getResources().getString(R.string.kolkata_place_4), getResources().getString(R.string.kolkata_detail_4)));
 
-        DataAdapter dataAdapter=new DataAdapter(getActivity(),arrayList);
+        DataAdapter dataAdapter = new DataAdapter(getActivity(), arrayList);
 
-        ListView listView= rootView.findViewById(R.id.listViewId);
+        ListView listView = rootView.findViewById(R.id.listViewId);
 
         listView.setAdapter(dataAdapter);
 

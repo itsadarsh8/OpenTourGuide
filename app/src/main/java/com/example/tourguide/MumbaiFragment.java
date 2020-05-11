@@ -14,21 +14,20 @@ import java.util.ArrayList;
 
 public class MumbaiFragment extends Fragment {
 
-    public MumbaiFragment(){}
+    public MumbaiFragment() {
+    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootView=inflater.inflate(R.layout.list_view,container,false);
+        View rootView = inflater.inflate(R.layout.list_view, container, false);
+        ArrayList<Data> arrayList = new ArrayList<>();
+        arrayList.add(new Data(getResources().getString(R.string.mumbai_place_1), getResources().getString(R.string.mumbai_detail_1),R.drawable.drive));
+        arrayList.add(new Data(getResources().getString(R.string.mumbai_place_2), getResources().getString(R.string.mumbai_detail_2),R.drawable.fort));
 
-        ArrayList<Data> arrayList= new ArrayList<>();
-        arrayList.add(new Data("India Gate4","Nice Nice4"));
-
-        DataAdapter dataAdapter=new DataAdapter(getActivity(),arrayList);
-
-        ListView listView= rootView.findViewById(R.id.listViewId);
-
+        DataAdapter dataAdapter = new DataAdapter(getActivity(), arrayList);
+        ListView listView = rootView.findViewById(R.id.listViewId);
         listView.setAdapter(dataAdapter);
 
         return rootView;

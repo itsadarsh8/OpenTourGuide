@@ -14,20 +14,22 @@ import java.util.ArrayList;
 
 public class GoaFragment extends Fragment {
 
-    public GoaFragment(){}
+    public GoaFragment() {
+    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootView=inflater.inflate(R.layout.list_view,container,false);
+        View rootView = inflater.inflate(R.layout.list_view, container, false);
 
-        ArrayList<Data> arrayList= new ArrayList<>();
-        arrayList.add(new Data("India Gate3","Nice Nice3"));
+        ArrayList<Data> arrayList = new ArrayList<>();
+        arrayList.add(new Data(getResources().getString(R.string.goa_place_1), getResources().getString(R.string.goa_detail_1)));
+        arrayList.add(new Data(getResources().getString(R.string.goa_place_2), getResources().getString(R.string.goa_detail_2)));
 
-        DataAdapter dataAdapter=new DataAdapter(getActivity(),arrayList);
+        DataAdapter dataAdapter = new DataAdapter(getActivity(), arrayList);
 
-        ListView listView= rootView.findViewById(R.id.listViewId);
+        ListView listView = rootView.findViewById(R.id.listViewId);
 
         listView.setAdapter(dataAdapter);
 
